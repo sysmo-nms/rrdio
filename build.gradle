@@ -1,0 +1,44 @@
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+apply plugin: 'jdepend'
+
+group   'rrdio'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.7
+
+defaultTasks 'installDist'
+
+applicationDefaultJvmArgs = [
+        "-client", "-Duser.language=en",
+        "-Xms100M", "-Xmx100M"
+]
+
+mainClassName = 'io.sysmo.rrd4qt.Rrd4Qt'
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    flatDir {dirs './lib'}
+}
+
+dependencies {
+    compile     'org.rrd4j:rrd4j:3.0-SNAPSHOT'
+    compile     'org.glassfish:javax.json:1.0.4'
+    testCompile 'junit:junit:4.11'
+}
+
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled = false
+        html.enabled = true
+    }
+}
+
+task wrapper(type: Wrapper) {
+     gradleVersion = '2.3'
+}
