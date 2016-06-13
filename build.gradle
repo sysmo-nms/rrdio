@@ -16,7 +16,7 @@ applicationDefaultJvmArgs = [
         "-Xms100M", "-Xmx100M"
 ]
 
-mainClassName = 'io.sysmo.rrd4qt.Rrd4Qt'
+mainClassName = 'io.sysmo.rrds.RrdIO'
 
 repositories {
     mavenCentral()
