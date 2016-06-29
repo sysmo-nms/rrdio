@@ -26,10 +26,11 @@ repositories {
     flatDir {dirs './lib'}
 }
 
+
 dependencies {
-    compile     'org.rrd4j:rrd4j:3.0-SNAPSHOT'
-    compile     'org.glassfish:javax.json:1.0.4'
-    testCompile 'junit:junit:4.11'
+    compile group: 'org.rrd4j',     name: 'rrd4j', version: '3.0-SNAPSHOT', changing: true
+    compile group: 'org.glassfish', name: 'javax.json', version: '1.0.4'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
 }
 
 tasks.withType(FindBugs) {
