@@ -4,7 +4,7 @@ apply plugin: 'pmd'
 apply plugin: 'findbugs'
 apply plugin: 'jdepend'
 
-group   'rrdio'
+group   'io.sysmo.rrds'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.7
