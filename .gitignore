@@ -1,3 +1,4 @@
 # gradle builds
 .gradle/
-build/
+/build/*
+!/build/install/
