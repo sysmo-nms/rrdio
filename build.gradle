@@ -20,9 +20,11 @@ mainClassName = 'io.sysmo.rrds.RrdIO'
 
 repositories {
     mavenCentral()
+    /*
     maven {
         url 'https://oss.sonatype.org/content/repositories/snapshots'
     }
+    */
     flatDir {dirs './lib'}
 }
 
