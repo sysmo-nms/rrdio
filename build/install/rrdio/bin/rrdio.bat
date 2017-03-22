@@ -69,7 +69,7 @@ set CMD_LINE_ARGS=%$
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\rrdio-1.0-SNAPSHOT.jar;%APP_HOME%\lib\rrd4j-3.0.jar;%APP_HOME%\lib\javax.json-1.0.4.jar
+set CLASSPATH=%APP_HOME%\lib\rrdio-1.0-SNAPSHOT.jar;%APP_HOME%\lib\rrd4j-3.1.jar;%APP_HOME%\lib\javax.json-1.0.4.jar
 
 @rem Execute rrdio
 "%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %RRDIO_OPTS%  -classpath "%CLASSPATH%" io.sysmo.rrds.RrdIO %CMD_LINE_ARGS%
